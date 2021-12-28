@@ -44,3 +44,24 @@ const li = document.createElement("li") // create element
 li.textContent = myLeads[i] // set text content
 ulEl.append(li) // append to ul
 ```
+
+### DOM manipulation comes with a cost
+
+What does that mean?
+
+``` javascript
+for (let i = 0; i < myLeads.length; i++>) {
+  ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+}
+```
+Manipulating DOM multiple times... instead
+
+``` javascript
+let listItems = ""
+for (let i = 0; i < myLeads.length; i++>) {
+  listItems += "<li>" + myLeads[i] + "</li>"
+}
+ulEl.innerHTML = listItems
+```
+
+Manipulate the DOM only one time = less cost
