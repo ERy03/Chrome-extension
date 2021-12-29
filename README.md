@@ -65,3 +65,25 @@ ulEl.innerHTML = listItems
 ```
 
 Manipulate the DOM only one time = less cost
+
+### localStorage
+
+What's our current problem with our chrome extension?
+-> When we refresh the page, our links are not being saved
+
+Try
+Inspect -> Application -> Local Storage
+
+`localStorage` is a global variable that we can access
+
+``` javascript
+localStorage.clear()
+
+// localStorage.setItem(key, value)
+localStorage.setItem("myLeads", "www.blah.com")
+
+// localStorage.getItem(key)
+localStorage.getItem("myLeads")
+// returns "www.blah.com"
+```
+key and value pairs ( ⚠️ Both need to be a string)
