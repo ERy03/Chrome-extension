@@ -71,6 +71,8 @@ Manipulate the DOM only one time = less cost
 What's our current problem with our chrome extension?
 -> When we refresh the page, our links are not being saved
 
+localStorage exists in Window object
+
 Try
 Inspect -> Application -> Local Storage
 
@@ -87,3 +89,30 @@ localStorage.getItem("myLeads")
 // returns "www.blah.com"
 ```
 key and value pairs ( ⚠️ Both need to be a string)
+
+What's another problem?
+Local Storage only supports strings...
+
+What can we do?
+use `JSON.stringify()` and `JSON.parse()`
+
+``` javascript
+let myLeads = `["www.awesomelead.com"]`
+
+// 1. Turn the myLeads string into an array
+myLeads = JSON.parse(myLeads)
+// 2. Push a new value to the array
+myLeads.push("Hello")
+// 3. Turn the array into a string again
+myLeads = JSON.stringify(myLeads)
+// 4. Console.log the string using typeof to verify that it's a string
+console.log(typeof myLeads) // string
+```
+
+``` javascript
+let myLeads = []
+localStorage.setItem("leads", JSON.stringify(myLeads))
+
+//...
+let storedLeads = JSON.parse(localStorage.getItem("leads"))
+```
