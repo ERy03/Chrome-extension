@@ -116,3 +116,13 @@ localStorage.setItem("leads", JSON.stringify(myLeads))
 //...
 let storedLeads = JSON.parse(localStorage.getItem("leads"))
 ```
+
+### Truthy or Falsy
+
+``` javascript
+let trueOrFalse = Boolean("hello")
+console.log(trueOrFalse) // true
+
+let trueOrFalse = Boolean("")
+console.log(trueOrFalse) // false
+```
