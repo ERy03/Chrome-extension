@@ -5,15 +5,6 @@ body {
     min-width: 400px;
 }
 
-/*
-
-Style our app according to the provided design!
-
-green color -> #5f9341
-
-*/
-
-
 input {
     width: 100%;
     padding: 10px;
@@ -26,15 +17,26 @@ button {
   margin-top: 5px;
   background-color: #5f9341;
   color: white;
-  border: none;
+  border: 1px solid #5f9341;
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 2px;
   transition: 0.3s;
 }
 
+#delete-btn {
+  background: white;
+  color: #5f9341;
+}
+
+#delete-btn:hover {
+  color: #537e3b;
+}
+
 button:hover {
   background-color: #537e3b;
+  border-color: #537e3b;
+  cursor: pointer;
 }
 
 ul {
