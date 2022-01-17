@@ -3,8 +3,6 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const tabBtn = document.getElementById("tab-btn")
-const selectBtn = document.getElementById("select-btn")
-
 const deleteBtn = document.getElementById("delete-btn")
 
 const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
@@ -28,7 +26,7 @@ function render(leads) {
   for(let i = 0; i < leads.length; i ++) {
     listItems += `
     <li>
-      <button class="deleteOne-btn">
+      <button class="deleteOne-btn" onclick="remove(this)">
         <i class="far fa-trash-alt"></i>
       </button>
       <a href= '${leads[i]}' target='_blank'>
@@ -58,3 +56,11 @@ inputBtn.addEventListener("click", function() {
     alert("Please enter valid input")
   }
 })
+
+function remove(event) {
+  const removingLead = event.parentNode.children[1].innerText
+  const removingIndex = myLeads.indexOf(removingLead)
+  myLeads.splice(removingIndex,1)
+  localStorage.setItem("myLeads", JSON.stringify(myLeads))
+  render(myLeads)
+}
