@@ -1,5 +1,18 @@
 # Chrome-extension
 save tab links with just a simple click
+Credits to scrimba's *Learn JavaScript for free* course
+
+### How to use this extension in your local chrome
+
+Download as zip
+
+chrome://extensions/
+
+Turn-on Developer Mode
+
+Click "Load unpacked" and select the downloaded folder
+
+Ready to use 😁
 
 ### Add Event listners
 
