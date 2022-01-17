@@ -5,7 +5,7 @@ body {
     min-width: 400px;
 }
 
-input {
+#input-el {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -26,6 +26,22 @@ button {
   font-weight: bold;
   border-radius: 2px;
   transition: 0.3s;
+}
+
+.deleteOne-btn {
+  background: transparent;
+  color: #537e3b;
+  padding: 3px;
+  border: none;
+  margin-right: 4px;
+  margin-top: 4px;
+}
+
+.deleteOne-btn:hover {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: black;
 }
 
 #delete-btn {
@@ -51,6 +67,9 @@ ul {
 
 li {
   margin-top: 5px;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
 }
 
 li a {
