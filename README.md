@@ -1,6 +1,10 @@
 # Chrome-extension
-save tab links with just a simple click
-Credits to scrimba's *Learn JavaScript for free* course
+Save tab links with just a simple click.  
+Updated version of scrimba's *Learn JavaScript for free* course
+
+![Screen Shot 2022-01-18 at 1 42 42](https://user-images.githubusercontent.com/76512208/149808866-89740858-18dc-48f0-9847-1136277521e5.png)
+
+<hr>
 
 ### How to use this extension in your local chrome
 
@@ -13,6 +17,8 @@ Turn-on Developer Mode
 Click "Load unpacked" and select the downloaded folder
 
 Ready to use 😁
+
+<hr>
 
 ### Add Event listners
 
@@ -31,6 +37,7 @@ inputBtn.addEventListener("click", function() {
   . . .
 })
 ```
+<hr>
 
 ### Getting the value from a input field
 
@@ -42,6 +49,8 @@ const inputEl = document.getElementById("input-el")
 
 console.log(inputEl.value)
 ```
+
+<hr>
 
 ### inner HTML
 
@@ -57,6 +66,7 @@ const li = document.createElement("li") // create element
 li.textContent = myLeads[i] // set text content
 ulEl.append(li) // append to ul
 ```
+<hr>
 
 ### DOM manipulation comes with a cost
 
@@ -78,6 +88,8 @@ ulEl.innerHTML = listItems
 ```
 
 Manipulate the DOM only one time = less cost
+
+<hr>
 
 ### localStorage
 
@@ -129,6 +141,7 @@ localStorage.setItem("leads", JSON.stringify(myLeads))
 //...
 let storedLeads = JSON.parse(localStorage.getItem("leads"))
 ```
+<hr>
 
 ### Truthy or Falsy
 
