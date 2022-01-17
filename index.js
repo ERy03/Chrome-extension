@@ -14,9 +14,13 @@ if (leadsFromLocalStorage) {
 
 tabBtn.addEventListener("click", function() {
   chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-    myLeads.push(tabs[0].url)
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    render(myLeads)
+    if (myLeads.includes(tabs[0].url)) {
+      alert("Link already copied!")
+    } else {
+      myLeads.push(tabs[0].url)
+      localStorage.setItem("myLeads", JSON.stringify(myLeads))
+      render(myLeads)
+    }
   })
 })
 
@@ -53,7 +57,7 @@ inputBtn.addEventListener("click", function() {
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     render(myLeads)
   } else {
-    alert("Please enter valid input")
+    alert("Please enter a valid input")
   }
 })
 
